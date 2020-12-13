@@ -88,6 +88,7 @@ const EMAILS = {
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+app.use(express.static(__dirname, "/public"));
 
 app.post('/api/users/', (req, res) => {
   const user = req.body;
